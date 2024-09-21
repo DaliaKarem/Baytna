@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.baytna.R
 
 class onBoardingScreen : AppCompatActivity() {
-    // Declare your views
     private lateinit var titletxt: TextView
     private lateinit var splashtxt: TextView
     private lateinit var img: ImageView
@@ -56,11 +55,9 @@ class onBoardingScreen : AppCompatActivity() {
 
 
     private fun updateOnBoardingScreen() {
-        titletxt.text = titles[currentIndex]
-        splashtxt.text = splashs[currentIndex]
+        titletxt.setText(titles[currentIndex])
+        splashtxt.setText(splashs[currentIndex])
         img.setImageResource(onBoardingImgs[currentIndex])
-
-        // Optionally update button text on the last screen
         if (currentIndex == titles.size - 1) {
             btn.text = "Finish"
         } else {
