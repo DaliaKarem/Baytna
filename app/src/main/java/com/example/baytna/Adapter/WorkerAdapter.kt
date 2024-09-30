@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.baytna.Model.WorkerItemsHome
 import com.example.baytna.R
@@ -39,7 +40,8 @@ class WorkerAdapter(private val WorkerList: List<WorkerItemsHome>):
 
             val category = worker.Cateory
             holder.categoryImg.setImageResource(category.img)
-            holder.cardView.setCardBackgroundColor(category.backgroudColor)
+
+            holder.categoryImg.setBackgroundColor(category.backgroudColor) // This should work if backgroundColor is an Int
         }
 
     }
