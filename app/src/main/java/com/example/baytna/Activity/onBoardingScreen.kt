@@ -15,23 +15,14 @@ class onBoardingScreen : AppCompatActivity() {
     private lateinit var btn: Button
 
     private var currentIndex = 0
+    private lateinit var titles: Array<String>
+    private lateinit var splashs: Array<String>
     private val onBoardingImgs = arrayOf(
         R.drawable.cleaning_img,
         R.drawable.book_img,
         R.drawable.payment
     )
 
-    private val titles = arrayOf(
-        "Welcome to Service App",
-        "Book Worker",
-        "Payment Online"
-    )
-
-    private val splashs = arrayOf(
-        "Choose from a variety of services like Cleaning, Electrical, Plumbing, and Garden workers to meet your needs.",
-        "You can Book a worker at any time. Select the day and how many times you want this service.",
-        "You have the option to pay using credit or cash as you like."
-    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding_screen);
@@ -39,6 +30,10 @@ class onBoardingScreen : AppCompatActivity() {
         splashtxt=findViewById(R.id.splashtxt);
         img=findViewById(R.id.imageId);
         btn=findViewById(R.id.next_btn);
+
+        titles = resources.getStringArray(R.array.onboarding_titles)
+        splashs = resources.getStringArray(R.array.onboarding_splashs)
+
         updateOnBoardingScreen()
         btn.setOnClickListener {
             currentIndex++
@@ -46,7 +41,7 @@ class onBoardingScreen : AppCompatActivity() {
             if (currentIndex < titles.size) {
                 updateOnBoardingScreen()
             } else {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, Home::class.java)
                 startActivity(intent)
                 finish()
             }

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Baytna</string>
+    <string-array name="onboarding_titles">
+        <item>Welcome to Service App</item>
+        <item>Book Worker</item>
+        <item>Payment Online</item>
+    </string-array>
+    <string-array name="onboarding_splashs">
+        <item>Choose from a variety of services like Cleaning, Electrical, Plumbing, and Garden workers to meet your needs.</item>
+        <item>You can Book a worker at any time. Select the day and how many times you want this service.</item>
+        <item>You have the option to pay using credit or cash as you like.</item>
+    </string-array>
 </resources>
