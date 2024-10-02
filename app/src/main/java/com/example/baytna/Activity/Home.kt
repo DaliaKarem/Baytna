@@ -21,21 +21,21 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         val categoryList = listOf(
-            CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#d84ad9")),
-            CategoryItems("Electrical", R.drawable.electrical_cat,Color.parseColor("#86768a")),
+            CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#008B8B")),
+            CategoryItems("Electrical", R.drawable.electrical_cat,Color.parseColor("#5C6769")),//
             CategoryItems("Baby Care", R.drawable.baby_cat, Color.parseColor("#458b9b")),
-            CategoryItems("Beauty Care", R.drawable.beauty_cat, Color.parseColor("#d3a783")) ,
+            CategoryItems("Beauty Care", R.drawable.beauty_cat, Color.parseColor("#d3a783")) ,//
             CategoryItems("Garden", R.drawable.garden_cat, Color.parseColor("#219688")),
-            CategoryItems("Paint", R.drawable.paint_cat, Color.parseColor("#b2a960")),
+            CategoryItems("Paint", R.drawable.paint_cat, Color.parseColor("#20B2AA")),//
             CategoryItems("Plumbing", R.drawable.plumbing_cat, Color.parseColor("#6082b2"))
 
         )
         val WorkerList= listOf(
-            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#d84ad9")),),
-            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#d84ad9")),),
-            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#d84ad9")),),
-            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#d84ad9")),),
-            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#d84ad9")),),
+            WorkerItemsHome("Worker1",R.drawable.worker,3,  CategoryItems("Garden", R.drawable.garden_cat, Color.parseColor("#219688")),),
+            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#008B8B")),),
+            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Electrical", R.drawable.electrical_cat,Color.parseColor("#86768a")),),
+            WorkerItemsHome("Worker1",R.drawable.worker,3, CategoryItems("Cleaning", R.drawable.cleaning_cat, Color.parseColor("#008B8B")),),
+            WorkerItemsHome("Worker1",R.drawable.worker,3,  CategoryItems("Garden", R.drawable.garden_cat, Color.parseColor("#219688")),),
 
             )
 

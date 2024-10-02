@@ -41,7 +41,7 @@ class WorkerAdapter(private val WorkerList: List<WorkerItemsHome>):
             val category = worker.Cateory
             holder.categoryImg.setImageResource(category.img)
 
-            holder.categoryImg.setBackgroundColor(category.backgroudColor) // This should work if backgroundColor is an Int
+            holder.categoryImg.setBackgroundColor(category.backgroudColor)
         }
 
     }
