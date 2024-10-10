@@ -10,4 +10,18 @@
         <item>You can Book a worker at any time. Select the day and how many times you want this service.</item>
         <item>You have the option to pay using credit or cash as you like.</item>
     </string-array>
+
+
+    <string name="emailHint">E-mail</string>
+    <string name="passHint">Password</string>
+    <string name="forgetPass">Forget Password?</string>
+    <string name="loginbtn">Login</string>
+    <string name="fnameHint">First name</string>
+    <string name="lnameHint">Last name</string>
+    <string name="signemail">E-mail</string>
+    <string name="confirmpass">Confirm password</string>
+    <string name="mobHint">Mobile</string>
+    <string name="signUp">Sign Up</string>
+    <string name="profile_image">profile image</string>
+    <string name="bkLoginbtnDesc_id">back to login description</string>
 </resources>
