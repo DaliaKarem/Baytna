@@ -24,4 +24,11 @@
     <string name="signUp">Sign Up</string>
     <string name="profile_image">profile image</string>
     <string name="bkLoginbtnDesc_id">back to login description</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">Hagar Hamdy</string>
+    <string name="email_profile">hello@gmail.com</string>
+    <string name="mobile_profile">+201111864178</string>
+    <string name="address_profile">123 Main Street, Dubai</string>
+    <string name="logout_profile">Logout</string>
+
 </resources>
