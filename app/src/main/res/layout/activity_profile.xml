@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Edit mobile number"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/mob" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

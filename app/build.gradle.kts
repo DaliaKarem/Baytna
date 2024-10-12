@@ -8,6 +8,11 @@ android {
     namespace = "com.example.baytna"
     compileSdk = 34
 
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.baytna"
         minSdk = 24
