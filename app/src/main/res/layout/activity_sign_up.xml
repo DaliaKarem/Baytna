@@ -152,7 +152,7 @@
 
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/sign_btn_id"
+                    android:id="@+id/sign_btn2_id"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"

@@ -252,15 +252,19 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <ImageButton
+
+    android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/arrow_back_white"
+        android:contentDescription="@string/bkLoginbtnDesc_id"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_back_white" />
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

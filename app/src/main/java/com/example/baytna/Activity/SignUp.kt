@@ -18,9 +18,24 @@ class SignUp : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_up)
         backToLogin = findViewById(R.id.backtoLogin_id)
+        signUpBtn = findViewById(R.id.sign_btn2_id)
+
+
         backToLogin.setOnClickListener{
-            var intent2 = Intent(this, Login::class.java)
-            startActivity(intent2)
+            var intent_back_login = Intent(this, Login::class.java)
+            startActivity(intent_back_login)
         }
+
+        signUpBtn.setOnClickListener{
+
+            var intent_signup_btn2 = Intent(this, Home::class.java)
+            startActivity(intent_signup_btn2)
+
+        }
+
+
+
+
+
     }
 }

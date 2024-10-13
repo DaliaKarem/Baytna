@@ -3,34 +3,32 @@ package com.example.baytna.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.baytna.R
 
 class Welcome : AppCompatActivity() {
-   lateinit var login_btn :Button
-    lateinit var signup_btn :Button
+   lateinit var loginw_btn :Button
+    lateinit var signupw_btn :Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        login_btn = findViewById(R.id.btn2)
-        signup_btn = findViewById(R.id.btn1)
+        loginw_btn = findViewById(R.id.welcom_btn1)
+        signupw_btn = findViewById(R.id.welcom_btn2)
 
-        login_btn.setOnClickListener{
-            var intent_login = Intent(this,Login::class.java)
-            startActivity(intent_login)
 
+
+        // Set click listener for the login button
+        loginw_btn.setOnClickListener {
+            val intentLogin = Intent(this, Login::class.java)
+            startActivity(intentLogin)
         }
 
-        login_btn.setOnClickListener{
-            var intent_signup = Intent(this,SignUp::class.java)
-            startActivity(intent_signup)
-
+        // Set click listener for the signup button
+        signupw_btn.setOnClickListener {
+            val intentSignup = Intent(this, SignUp::class.java)
+            startActivity(intentSignup)
         }
-
     }
 }
