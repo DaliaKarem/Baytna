@@ -10,5 +10,8 @@
     <color name="light_cyan">#f6fbff</color>
     <color name="gray">#B7B7B7</color>
     <color name ="light_blue">#006BFF</color>
+    <color name="gray2">#90A4AE</color>
+    <color name="darkGray">#263238</color>
+
 
 </resources>

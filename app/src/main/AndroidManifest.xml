@@ -13,24 +13,23 @@
         android:theme="@style/Theme.Baytna"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.Welcome"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Book_time"
             android:exported="false" />
-
         <activity
             android:name=".Activity.Profile"
             android:exported="false" />
         <activity
             android:name=".Activity.Base_Activity"
             android:exported="false" />
-
         <activity
             android:name=".Activity.SignUp"
             android:exported="false" />
         <activity
             android:name=".Activity.Login"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Activity.gridViewCategory"
             android:exported="false" />
@@ -39,7 +38,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity.onBoardingScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
