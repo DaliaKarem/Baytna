@@ -1,4 +1,4 @@
-package com.example.baytna.Activity;
+package com.example.baytna.View;
 
 import android.content.Intent
 import android.os.Bundle

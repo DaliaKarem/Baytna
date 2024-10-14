@@ -1,4 +1,4 @@
-package com.example.baytna.Activity
+package com.example.baytna.View
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.icu.util.Calendar

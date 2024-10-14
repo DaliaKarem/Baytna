@@ -1,15 +1,11 @@
-package com.example.baytna.Activity
+package com.example.baytna.View
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.baytna.Adapter.CategoryAdapter
 import com.example.baytna.Const.categoryList

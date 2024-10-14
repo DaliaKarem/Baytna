@@ -17,8 +17,8 @@
     <string name="forgetPass">Forget Password?</string>
     <string name="loginbtn">Login</string>
 
-    <string name="fnameHint">First name</string>
-    <string name="lnameHint">Last name</string>
+    <string name="fnameHint">Name</string>
+    <string name="lnameHint">Address</string>
     <string name="signemail">E-mail</string>
     <string name="confirmpass">Confirm password</string>
     <string name="mobHint">Mobile</string>

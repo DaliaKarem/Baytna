@@ -1,7 +1,6 @@
-package com.example.baytna.Activity
+package com.example.baytna.View
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -12,8 +11,6 @@ import com.example.baytna.Adapter.CategoryAdapter
 import com.example.baytna.Adapter.WorkerAdapter
 import com.example.baytna.Const.WorkerList
 import com.example.baytna.Const.categoryList
-import com.example.baytna.Model.CategoryItems
-import com.example.baytna.Model.WorkerItemsHome
 import com.example.baytna.R
 
 class Home : AppCompatActivity() {

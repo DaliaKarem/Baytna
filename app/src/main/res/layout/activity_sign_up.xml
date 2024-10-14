@@ -6,8 +6,9 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@drawable/backgroud"
-    tools:context=".Activity.SignUp">
+    tools:context=".View.SignUp">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -68,26 +69,13 @@
                     android:drawableLeft="@drawable/name"
                     android:drawablePadding="8dp"
                     android:hint="@string/fnameHint"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <EditText
-                    android:id="@+id/lname_id"
-                    style="@style/Edit_txt_style_signup"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edit_txt_shape"
-                    android:drawableLeft="@drawable/name"
-                    android:drawablePadding="8dp"
-                    android:hint="@string/lnameHint"
-                    android:inputType="textEmailAddress"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+
 
 
                 <EditText
@@ -115,7 +103,7 @@
                     android:drawableLeft="@drawable/pass"
                     android:drawablePadding="8dp"
                     android:hint="@string/passHint"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -130,7 +118,7 @@
                     android:drawableLeft="@drawable/pass"
                     android:drawablePadding="8dp"
                     android:hint="@string/confirmpass"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -145,12 +133,25 @@
                     android:drawableLeft="@drawable/mob"
                     android:drawablePadding="8dp"
                     android:hint="@string/mobHint"
-                    android:inputType="textEmailAddress"
+                    android:inputType="phone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
+                <EditText
+                    android:id="@+id/lname_id"
+                    style="@style/Edit_txt_style_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_txt_shape"
+                    android:drawableLeft="@drawable/address"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/lnameHint"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/sign_btn2_id"
                     android:layout_width="match_parent"

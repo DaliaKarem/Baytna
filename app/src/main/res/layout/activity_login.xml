@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroud"
-    tools:context=".Activity.Login">
+    android:fitsSystemWindows="true"
+
+    tools:context=".View.Login">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -41,9 +43,12 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
 
                 <TextView
                     android:layout_width="match_parent"
