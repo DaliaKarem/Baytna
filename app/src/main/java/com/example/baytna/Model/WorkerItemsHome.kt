@@ -1,8 +1,11 @@
 package com.example.baytna.Model
 
 data class WorkerItemsHome (
-    var name:String,
-    var img:Int,
-    var rating:Int,
-    val Cateory:CategoryItems,
-    )
+    var Name:String ="",
+    var ImagePath:String = "",
+    var Rate:Long =0,
+    val CategoryId:Long = 0,
+    var price:String = "",
+    var Mobile :String = "",
+    var Id : Long = 0
+)
