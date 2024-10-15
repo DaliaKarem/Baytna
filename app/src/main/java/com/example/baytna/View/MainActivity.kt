@@ -1,4 +1,4 @@
-package com.example.baytna.Activity
+package com.example.baytna.View
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
