@@ -12,19 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/app_default"
-        app:navigationIcon="@drawable/arrow_back_white"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/arrow_back_white">
+
 
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/profile"
             android:textColor="@android:color/white"
-            android:layout_gravity="center"
             android:textSize="22sp" />
+
+
+
+
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -134,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Edit mobile number"
-                    android:src="@drawable/mob" />
+                    android:src="@drawable/edit" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

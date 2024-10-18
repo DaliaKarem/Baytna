@@ -5,6 +5,7 @@ import com.example.baytna.View.ProfileView
 
 class ProfilePresenter(private val view: ProfileView, private val model: UserModel) {
 
+
     fun loadUserProfile() {
         model.getUserProfile(object : UserModel.ProfileCallback {
             override fun onProfileLoaded(

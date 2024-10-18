@@ -1,5 +1,7 @@
 package com.example.baytna.Adapter
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,8 +15,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.baytna.Model.CategoryItems
 import com.example.baytna.R
+import com.example.baytna.View.WorkerList
 
-class CategoryAdapter(private val categoryList: List<CategoryItems>) :
+class CategoryAdapter(private val categoryList: List<CategoryItems> , private val context: Context) :
     RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -30,7 +33,6 @@ class CategoryAdapter(private val categoryList: List<CategoryItems>) :
     }
 
     override fun getItemCount(): Int {
-        Log.d("checkAdapter", "Item count: ${categoryList.size}")
         return categoryList.size
     }
 
@@ -40,11 +42,17 @@ class CategoryAdapter(private val categoryList: List<CategoryItems>) :
 
         // Load image using Glide
 
+        holder.cardView.setOnClickListener {
+            val intent = Intent(context,WorkerList::class.java)
+            intent.putExtra("categoryName", category.Name)
+
+            context.startActivity(intent)
+        }
 
 
         Glide.with(holder.itemView.context)
             .load(category.ImagePath)
-            .apply(RequestOptions().error(R.drawable.mob))  // Use a placeholder for error  RequestOptions
+            .apply(RequestOptions().error(R.drawable.mob))
             .into(holder.categoryImage)
 
         // Set background color
@@ -55,6 +63,5 @@ class CategoryAdapter(private val categoryList: List<CategoryItems>) :
             holder.cardView.setCardBackgroundColor(Color.WHITE)
         }
 
-        Log.d("checkAdapter", "Bind category: ${category.Name}")
     }
 }

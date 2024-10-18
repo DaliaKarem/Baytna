@@ -6,14 +6,19 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_icon_baytna"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_icon_baytna"
         android:supportsRtl="true"
         android:theme="@style/Theme.Baytna"
-        tools:targetApi="31"
         android:windowSoftInputMode="adjustPan"
-        >
+        tools:targetApi="31">
+        <activity
+            android:name=".View.SuccessfullyOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.WorkerList"
+            android:exported="false" />
         <activity
             android:name=".View.Welcome"
             android:exported="false" />
@@ -23,42 +28,33 @@
         <activity
             android:name=".View.Profile"
             android:exported="false" />
-        <activity
-            android:name=".View.Base_Activity"
-            android:exported="false" />
+
         <activity
             android:name=".View.SignUp"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/SignUpTheme"/>
+            android:theme="@style/SignUpTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".View.Login"
             android:exported="true"
-            android:theme="@style/LoginTheme"/>
-
+            android:theme="@style/LoginTheme" />
         <activity
             android:name=".View.gridViewCategory"
             android:exported="false" />
         <activity
             android:name=".View.Home"
-            android:exported="true" >
+            android:exported="true" />
+
+        <activity
+            android:name=".View.onBoardingScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <activity
-            android:name=".View.onBoardingScreen"
-            android:exported="false"/>
-
-
-
-        <activity
-            android:name=".View.MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

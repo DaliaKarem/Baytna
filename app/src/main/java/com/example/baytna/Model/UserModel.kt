@@ -1,5 +1,7 @@
 package com.example.baytna.Model
 
+import android.content.Context
+import com.example.baytna.Const.capitalizeEachWord
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -8,9 +10,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class UserModel {
+class UserModel() {
     private val auth = FirebaseAuth.getInstance()
     private val database = FirebaseDatabase.getInstance().getReference("Users")
+
+
+
 
     fun authenticateUser(email: String?, password: String?, callback: AuthCallback) {
         auth.signInWithEmailAndPassword(email!!, password!!)
@@ -23,6 +28,10 @@ class UserModel {
             }
     }
     fun registerUser(name: String? , mobile: String? , email: String?, password: String?, callback: AuthCallback) {
+
+        // make name formated befor stored on firbase then call it in sign up presenter
+
+        val formattedName = capitalizeEachWord(name)
         auth.createUserWithEmailAndPassword(email!!, password!!)
             .addOnCompleteListener { task: Task<AuthResult?> ->
                 if (task.isSuccessful) {
@@ -30,7 +39,7 @@ class UserModel {
 
                     // Create a user map with additional data
                     val userMap = mapOf(
-                        "name" to name,
+                        "name" to formattedName,
                         "mobile" to mobile,
                         "email" to email
 
@@ -41,6 +50,7 @@ class UserModel {
                         database.child(uid).setValue(userMap)
                             .addOnSuccessListener {
                                 callback.onSuccess()
+
                             }
                             .addOnFailureListener { e ->
                                 callback.onFailure(e.message)
@@ -62,6 +72,7 @@ class UserModel {
                     val mobile = snapshot.child("mobile").getValue(String::class.java)
                     val address = snapshot.child("address").getValue(String::class.java)
 
+
                     callback.onProfileLoaded(name, email, mobile, address)
                 }
 
@@ -71,6 +82,8 @@ class UserModel {
             })
         }
     }
+
+
 
     interface ProfileCallback {
         fun onProfileLoaded(name: String?, email: String?, mobile: String?, address: String?)

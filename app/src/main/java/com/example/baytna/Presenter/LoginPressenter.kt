@@ -33,31 +33,7 @@ class LoginPresenter(private val view: LoginView, private val userModel: UserMod
             }
         })
 
-//        auth.fetchSignInMethodsForEmail(email!!)
-//            .addOnCompleteListener { task ->
-//                if (task.isSuccessful) {
-//                    val signInMethods = task.result?.signInMethods
-//                    if (signInMethods.isNullOrEmpty()) {
-//                        // Email does not exist
-//                        view.onLoginFailure("Email not found. Please sign up first.")
-//                    } else {
-//                        // Email exists, proceed with authentication
-//                        userModel.authenticateUser(email, password, object : AuthCallback {
-//                            override fun onSuccess() {
-//                                view.onLoginSuccess()
-//                            }
-//
-//                            override fun onFailure(message: String?) {
-//                                view.onLoginFailure(message ?: "Login failed.")
-//                            }
-//                        })
-//                    }
-//                } else {
-//                    view.onLoginFailure("Error checking email: ${task.exception?.message}")
-//                }
-//            }
     }
-
     private fun isValidEmail(email: String?): Boolean {
         return email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 

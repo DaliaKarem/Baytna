@@ -26,6 +26,7 @@ class Profile : AppCompatActivity() , ProfileView {
     private lateinit var logoutButton: Button
     private lateinit var nameTextView: TextView
     private lateinit var emailTextView: TextView
+    private lateinit var backToHome :ImageButton
 
 
 
@@ -42,6 +43,8 @@ class Profile : AppCompatActivity() , ProfileView {
         val toolbar: Toolbar = findViewById(R.id.profile_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
 
         // Initialize views
         mobileEditText = findViewById(R.id.mobile_edit)
@@ -55,8 +58,6 @@ class Profile : AppCompatActivity() , ProfileView {
         presenter = ProfilePresenter(this, UserModel())
 
         presenter.loadUserProfile()
-
-
 
 
 

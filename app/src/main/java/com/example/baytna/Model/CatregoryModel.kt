@@ -17,15 +17,11 @@ class CategoryModel {
         database.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    Log.d("snapshot" , "data"+ snapshot)
                     for (childSnapshot in snapshot.children) {
-                        Log.d(" childSnapshot" , "data"+ childSnapshot)
 
                         val category = childSnapshot.getValue(CategoryItems::class.java)
-                        Log.d("category" , "data"+ category)
 
                         category?.let { allCategories.add(it) }
-                        Log.d("allcategories" , "data"+ allCategories)
 
                     }
                     callback.onAllCategoriesLoaded(allCategories)

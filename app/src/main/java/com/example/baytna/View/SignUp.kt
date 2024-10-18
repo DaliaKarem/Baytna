@@ -33,7 +33,6 @@ class SignUp : AppCompatActivity(),SignUpView {
         super.onCreate(savedInstanceState)
 
 
-        enableEdgeToEdge()
 
         setContentView(R.layout.activity_sign_up)
 

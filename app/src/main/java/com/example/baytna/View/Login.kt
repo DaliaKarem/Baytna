@@ -67,12 +67,29 @@ class Login : AppCompatActivity(),LoginView {
 
 
 
-    }override fun onLoginSuccess() {
-        Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
+    }
 
-        var intent2 : Intent = Intent(this, Home::class.java)
-        startActivity(intent2)
+    override fun onLoginSuccess() {
+        Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
 
+        // Get user name from the UserModel
+        UserModel().getUserProfile(object : UserModel.ProfileCallback {
+            override fun onProfileLoaded(name: String?, email: String?, mobile: String?, address: String?) {
+                // Save user name in SharedPreferences
+                val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("userName", name)
+                editor.apply()
+
+                // Start Home activity
+                val intent2 = Intent(this@Login, Home::class.java)
+                startActivity(intent2)
+            }
+
+            override fun onFailure(message: String) {
+                Toast.makeText(this@Login, "Failed to get user profile: $message", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     override fun onLoginFailure(message: String) {

@@ -1,6 +1,7 @@
 package com.example.baytna.Presenter
 
 import android.util.Log
+import com.example.baytna.Const.capitalizeEachWord
 import com.example.baytna.Model.UserModel
 import com.example.baytna.Model.UserModel.AuthCallback
 import com.example.baytna.View.SignUpView
@@ -12,16 +13,15 @@ class SignUpPresenter(view: SignUpView, private val userModel: UserModel)  {
     private val view: SignUpView = view
 
     fun signUp(name: String? ,mobile: String? , email: String?, password: String, confirmPassword: String) {
-//
-//        Log.d("mobile" , "mobile" + mobile )
-//        Log.d("name" , "name" + name )
-//        Log.d("email" , "name" + email )
-//        Log.d("password" , "name" + password )
+
 
         if (name.isNullOrEmpty()) {
             view.onSignUpFailure("Name is required.")
             return
         }
+        // make name formated befor stored on firbase
+        val formattedName = capitalizeEachWord(name)
+
 
         if (email.isNullOrEmpty()) {
             view.onSignUpFailure("Email is required.")
@@ -62,7 +62,7 @@ class SignUpPresenter(view: SignUpView, private val userModel: UserModel)  {
             view.onSignUpFailure("Passwords do not match.")
             return
         }
-        userModel.registerUser(name , mobile , email, password, object : AuthCallback {
+        userModel.registerUser(formattedName, mobile, email, password, object : AuthCallback {
             override fun onSuccess() {
                 view.onSignUpSuccess()
             }
@@ -77,4 +77,6 @@ class SignUpPresenter(view: SignUpView, private val userModel: UserModel)  {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
     }
+
+
 }

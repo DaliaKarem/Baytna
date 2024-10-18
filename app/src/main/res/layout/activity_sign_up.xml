@@ -138,20 +138,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <EditText
-                    android:id="@+id/lname_id"
-                    style="@style/Edit_txt_style_signup"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edit_txt_shape"
-                    android:drawableLeft="@drawable/address"
-                    android:drawablePadding="8dp"
-                    android:hint="@string/lnameHint"
-                    android:inputType="text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/sign_btn2_id"
                     android:layout_width="match_parent"
